@@ -6,6 +6,7 @@
   "scripts": {
     "open-app": "gulp open-app",
     "start": "npm run open-app",
+    "postinstall": "gulp default",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp-watch"
   },
@@ -15,15 +16,14 @@
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
-    "startbootstrap-freelancer": "^7.0.4"
-  },
-  "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-clean": "^0.4.0",
     "gulp-install": "^1.1.0",
+    "gulp-open": "^3.0.1",
     "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-open": "^3.0.1"
+    "gulp-sourcemaps": "^2.6.5"
+  },
+  "devDependencies": {
   }
 }
