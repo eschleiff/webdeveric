@@ -6,7 +6,6 @@
   "scripts": {
     "open-app": "gulp open-app",
     "start": "npm run open-app",
-    "postinstall": "gulp default",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "gulp-watch"
   },
