@@ -1,7 +1,7 @@
 const express = require('express');
 const exphbs = require('express-handlebars');
 const gulp = require('./gulpfile');
-const path = require('path/posix');
+const path = require('path');
 
 const app = express();
 
