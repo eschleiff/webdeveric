@@ -3,7 +3,7 @@
       <div class="row">
         <div class="col-lg-4 col-lg-6 ml-auto mr-auto">
           <div class="card card-login">
-            <form class="form" method="" action="">
+            <form class="form" method="POST" action="#">
               <div class="card-header card-header-primary text-center">
                 <h2 class="card-title">Contact Me</h4>
                 <h5 class="">Let me know what you think...</h6>
@@ -16,7 +16,7 @@
                       <i class="material-icons">face</i>
                     </span>
                   </div>
-                  <input type="text" class="form-control" placeholder="First Name...">
+                  <input type="text" class="form-control" name="firstName" placeholder="First Name..." required>
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -24,7 +24,7 @@
                       <i class="material-icons">mail</i>
                     </span>
                   </div>
-                  <input type="email" class="form-control" placeholder="Email...">
+                  <input type="email" class="form-control" name="email" placeholder="Email..." required>
                 </div>
                 <div class="input-group">
                   <div class="input-group-prepend">
@@ -32,11 +32,11 @@
                       <i class="material-icons">question_answer</i>
                     </span>
                   </div>
-                  <textarea class="form-control" rows="5" placeholder="Enter Message..."></textarea>
+                  <textarea class="form-control" rows="5" name="message" placeholder="Enter Message..." required></textarea>
                 </div>
               </div>
               <div class="footer text-center">
-                <a href="#" class="btn btn-primary btn-link btn-wd btn-lg">Send</a>
+                <button type="submit" class="btn btn-primary btn-link btn-wd btn-lg">Send</button>
               </div>
             </form>
           </div>

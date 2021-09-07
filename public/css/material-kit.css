@@ -5178,6 +5178,7 @@ tbody.collapse.show {
   margin-bottom: 1rem;
   border: 1px solid transparent;
   border-radius: 0.25rem;
+
 }
 
 .alert-heading {
@@ -15014,9 +15015,20 @@ textarea {
   color: #fff;
 }
 
+.alert-fixed {
+  position:fixed; 
+  top: 0px; 
+  left: 0px; 
+  width: 100%;
+  z-index:9999; 
+  border-radius:0px
+}
+
 .alert.alert-success {
   background-color: #55b559;
   color: #fff;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .alert.alert-success a,
