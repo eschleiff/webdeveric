@@ -13,10 +13,14 @@ exports.send = async function main(userInfo) {
     });
 
     let info = await transporter.sendMail({
-        from: `'${userInfo.firstName}' <${userInfo.email}>`,
-        to: 'ericschleiff@gmail.com',
+        from: `'Web Dev Eric' <${process.env.EMAIL}>`,
+        to: `${process.env.EMAIL}`,
         subject: 'Web Dev Eric Message',
         text: `${userInfo.message}`,
-        html: `<h1>${userInfo.message}</h1>`,
+        html: `
+            <h1>You've got a message from...</h1>
+            <h3>${userInfo.firstName}, ${userInfo.email}</h3>
+            <h4>${userInfo.message}</h4>
+        `,
     });
 };
