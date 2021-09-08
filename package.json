@@ -2,7 +2,7 @@
   "name": "random-project",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "open-app": "gulp open-app",
     "start": "npm run open-app",

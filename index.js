@@ -5,6 +5,7 @@ const path = require('path');
 const sendMail = require('./mailer');
 const flash = require('connect-flash');
 const session = require('express-session');
+const routes = require('./routes/index');
 
 const app = express();
 
@@ -30,31 +31,7 @@ app.set('view engine', 'handlebars');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.get('/', (req, res) => {
-    res.render('home');
-});
-
-app.get('/random', (req, res) => {
-    res.render('random');
-});
-
-app.get('/contact', (req, res) => {
-    res.render('contact');
-});
-
-app.post('/contact', (req, res) => {
-    let userInfo = req.body
-
-    try {
-        sendMail.send(userInfo);
-        req.flash('success', "Message Sent Successfully!")
-        res.redirect('back');
-        console.log('send successful')
-    } catch (error) {
-        console.log(error)
-    }
-
-});
+app.use(routes);
 
 // app.listen(3000, () => {
 //     console.log('Now listening on Port 3000')
